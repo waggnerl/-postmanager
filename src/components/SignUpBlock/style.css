@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: center;
   background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
 }
 
 .signUpForm {
@@ -17,22 +19,38 @@
 
 p {
   font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+label {
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  line-height: 18.75px;
+  size: 16px;
 }
 
 input {
   position: relative;
-  width: 98%;
+  width: 99%;
   height: 18px;
+  padding: 6px 0 6px 0;
+  margin: 16px 0 16px 0;
 }
 
 button {
   align-self: flex-end;
-  margin-top: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  width: 111px;
+  height: 32px;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
 }
 
-@media only screen and (max-width: 600px) {
-  .mainContainer {
-    width: 60vw;
-    height: 30vh;
+@media only screen and (max-width: 912px) {
+  .container {
+    width: 80vw;
+    height: 40vh;
   }
 }
