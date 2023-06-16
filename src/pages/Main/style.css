@@ -1,0 +1,10 @@
+.containerMain {
+  display: flex;
+  justify-content: center;
+}
+
+.containerLimitWidth {
+  width: 800px;
+  background-color: white;
+  height: 100vh;
+}
