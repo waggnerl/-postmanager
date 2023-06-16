@@ -1,5 +1,6 @@
 import { useState, ChangeEventHandler, MouseEventHandler } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { useNavigate } from "react-router-dom";
 import { create } from "../../actions/user";
 import "./style.css";
 
@@ -7,9 +8,13 @@ function SignUpBlock() {
   const name = useAppSelector((state) => state.user.name);
   const dispatch = useAppDispatch();
   const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
   const handleData: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     dispatch(create(userName));
+    if (userName.length) {
+      navigate("/main");
+    }
   };
 
   const handleName: ChangeEventHandler<HTMLInputElement> = (e) => {
@@ -21,7 +26,12 @@ function SignUpBlock() {
       <form className="signUpForm">
         <p>Welcome to CodeLeap network</p>
         <label>Please enter your username</label>
-        <input type="text" name="name" onChange={handleName} />
+        <input
+          placeholder="John doe"
+          type="text"
+          name="name"
+          onChange={handleName}
+        />
         <button
           style={
             !userName.length
