@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "../../redux/store";
 
 interface UserState {
-  name: string;
+  username: string;
 }
 
 const initialState: UserState = {
-  name: "",
+  username: "",
 };
 
 export const userSlice = createSlice({
@@ -14,13 +14,13 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     create: (state, action) => {
-      state.name = action.payload;
+      state.username = action.payload;
     },
   },
 });
 
 export const { create } = userSlice.actions;
 
-export const selectCount = (state: RootState) => state.user.name;
+export const selectCount = (state: RootState) => state.user.username;
 
 export default userSlice.reducer;
