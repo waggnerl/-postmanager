@@ -1,11 +1,10 @@
 import { useState, ChangeEventHandler, MouseEventHandler } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { useAppDispatch } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
 import { create } from "../../actions/user";
 import "./style.css";
 
 function SignUpBlock() {
-  const name = useAppSelector((state) => state.user.name);
   const dispatch = useAppDispatch();
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
