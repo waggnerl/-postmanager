@@ -7,7 +7,6 @@ function SignUpBlock() {
   const name = useAppSelector((state) => state.user.name);
   const dispatch = useAppDispatch();
   const [userName, setUserName] = useState("");
-
   const handleData: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     dispatch(create(userName));
@@ -23,8 +22,16 @@ function SignUpBlock() {
         <p>Welcome to CodeLeap network</p>
         <label>Please enter your username</label>
         <input type="text" name="name" onChange={handleName} />
-        <button type="submit" onClick={handleData}>
-          Enter
+        <button
+          style={
+            !userName.length
+              ? { backgroundColor: "#DDDDDD" }
+              : { backgroundColor: "#7695ec" }
+          }
+          type="submit"
+          onClick={handleData}
+        >
+          ENTER
         </button>
       </form>
     </div>
