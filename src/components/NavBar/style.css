@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   overflow: hidden;
   align-items: center;
   font-family: "Roboto", sans-serif;
