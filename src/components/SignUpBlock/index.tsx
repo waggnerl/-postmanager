@@ -1,7 +1,8 @@
 import { useState, ChangeEventHandler, MouseEventHandler } from "react";
 import { useAppDispatch } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
-import { create } from "../../actions/user";
+import { updateUser } from "../../actions/user";
+
 import "./style.css";
 
 function SignUpBlock() {
@@ -10,7 +11,8 @@ function SignUpBlock() {
   const navigate = useNavigate();
   const handleData: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    dispatch(create(userName));
+    dispatch(updateUser(userName));
+    localStorage.setItem("username", userName);
     if (userName.length) {
       navigate("/main");
     }
@@ -23,7 +25,7 @@ function SignUpBlock() {
   return (
     <div className="container">
       <form className="signUpForm">
-        <p>Welcome to CodeLeap network</p>
+        <p className="headerText">Welcome to CodeLeap network</p>
         <label>Please enter your username</label>
         <input
           placeholder="John doe"
