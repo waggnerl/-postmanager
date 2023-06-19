@@ -1,7 +1,7 @@
 // src/store/dataSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type Posts = {
+export type Posts = {
   id: number;
   username: string;
   created_datetime: string;
