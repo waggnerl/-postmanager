@@ -1,6 +1,9 @@
-import { fetchDataSuccess, changeApiPage } from "../../redux/reducers/api";
+import {
+  fetchDataSuccess,
+  changeApiPage,
+  Posts,
+} from "../../redux/reducers/api";
 import { Dispatch } from "@reduxjs/toolkit";
-import { Posts } from "../../redux/reducers/api/index";
 export const fetchData = (page: number) => {
   return async (dispatch: Dispatch) => {
     try {

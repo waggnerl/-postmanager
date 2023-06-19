@@ -1,9 +1,4 @@
-import {
-  ChangeEventHandler,
-  MouseEventHandler,
-  useEffect,
-  useState,
-} from "react";
+import { ChangeEventHandler, MouseEventHandler, useState } from "react";
 import "./style.css";
 import { instanceAxios } from "../../pages/Main/constants";
 import { useAppSelector } from "../../redux/store";
