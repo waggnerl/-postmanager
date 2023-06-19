@@ -1,26 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { RootState } from "../../redux/store";
+import { create } from "../../redux/reducers/user";
+import { PayloadAction } from "@reduxjs/toolkit";
+import { Dispatch } from "@reduxjs/toolkit";
 
-interface UserState {
-  username: string;
-}
-
-const initialState: UserState = {
-  username: "",
+export const updateUser = (name: string) => {
+  return (dispatch: Dispatch<PayloadAction<string>>) => {
+    dispatch(create(name));
+  };
 };
-
-export const userSlice = createSlice({
-  name: "user",
-  initialState,
-  reducers: {
-    create: (state, action) => {
-      state.username = action.payload;
-    },
-  },
-});
-
-export const { create } = userSlice.actions;
-
-export const selectCount = (state: RootState) => state.user.username;
-
-export default userSlice.reducer;
