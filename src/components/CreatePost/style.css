@@ -1,0 +1,68 @@
+.containerCreatePost {
+  max-width: 752px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 16px;
+  margin: 24px;
+  padding: 24px;
+}
+
+.containerInputs {
+  padding: 24px 0 24px 0;
+}
+
+.headerText {
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+label {
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  line-height: 18.75px;
+  size: 16px;
+  margin-top: 24px;
+}
+
+input {
+  position: relative;
+  width: 99%;
+  height: 18px;
+  padding: 6px 0 6px 0;
+  margin: 10px 0 10px 0;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+#content {
+  width: 99%;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: none;
+  margin: 10px 0 10px 0;
+}
+
+.createButton {
+  align-self: flex-end;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  width: 111px;
+  height: 32px;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+@media only screen and (max-width: 912px) {
+  .containerCreatePost {
+    max-width: 90vw;
+    margin: 24px;
+    justify-self: center;
+  }
+}
