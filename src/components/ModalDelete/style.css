@@ -1,0 +1,40 @@
+.titleCloseBtn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  align-self: self-start;
+  margin-bottom: 40px;
+}
+
+.footerDelete button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 8px;
+  width: 120px;
+  height: 32px;
+}
+
+.footerDelete {
+  display: flex;
+  align-self: self-end;
+}
+
+.cancelButton {
+  background: #ffffff;
+  color: #000000;
+}
+
+.deleteButton {
+  background: red;
+  margin-left: 16px;
+}
